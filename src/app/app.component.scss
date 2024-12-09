@@ -80,6 +80,10 @@
       padding-top: 5px;
       color: red;
     }
+    .loader-style {
+      position:absolute;
+      top:6%;
+    }
   }
   @media screen and (max-width: 578px) {
     .container {
@@ -98,6 +102,10 @@
       width: 95%;
       margin-top: 0px;
       margin-bottom: 20px;
+    }
+    .loader-style {
+      position:absolute;
+      top:19%;
     }
     }
   }

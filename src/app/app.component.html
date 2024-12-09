@@ -9,7 +9,7 @@
     required
   />
   <button type="submit" class="SearchFlex">Search</button>
-  <span *ngIf="isLoading"><img src="./../assets/loader.gif" width="50" height="50"/></span>
+  <span *ngIf="isLoading" class="loader-style"><img src="./../assets/loader.gif" width="30" height="30"/></span>
   <div class="error"
     *ngIf="
       weatherForm.controls['city']?.invalid &&
