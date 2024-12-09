@@ -1,0 +1,103 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  
+  .container > div {
+    margin: 10px;
+    padding: 5px;
+    font-size: 20px;
+  }
+  .table-style{
+  flex:1
+  }
+  .titleFlex {
+    flex: 30%;
+    font-size: 30px !important;
+  }
+  .SearchFlex {
+    flex: 20%;
+  }
+  .tables{
+    margin:0;
+    padding:0;
+    width: 100%;
+    text-align: center;
+  }
+  .tables thead tr td{
+    background-color: #eb460c;
+  }
+  table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+  .emptyDiv {
+    flex: 40%;
+  }
+  .noRecords {
+    text-align: center;
+    border: 2px solid black;
+    padding:15px !important;
+    border-radius: 5px;
+  }
+  .text-center {
+    text-align: center;
+  }
+  
+  
+  input {
+    padding: 5px;
+    border-radius: 5px;
+    margin-right: 25px;
+    border: 1px solid #d37f09;
+    padding: 10px 11px;
+    width: 40%;
+  }
+  button {
+    padding: 5px;
+    border-radius: 2px;
+    cursor: pointer;
+    background-color: #d37f09;
+    color: #fff !important;
+    border: 1px solid #d37f09;
+    padding: 9px 18px;
+  }
+  form {
+    width: 40%;
+    padding-top: 16px;
+  }
+  .tempData {
+    background-color: #dddddd;
+  }
+  .container {
+    .weather-title {
+      font-size: 35px;
+      color: #d37f09;
+      width: 30%;
+    }
+    .error {
+      padding-top: 5px;
+      color: red;
+    }
+  }
+  @media screen and (max-width: 578px) {
+    .container {
+     flex-direction: column;
+     .weather-title {
+      font-size: 30px;
+      text-align: center;
+      width: 100%;
+    }
+    form {
+    width: 100%;
+    padding-top: 0px;
+    text-align: center;
+    }
+    input {
+      width: 95%;
+      margin-top: 0px;
+      margin-bottom: 20px;
+    }
+    }
+  }

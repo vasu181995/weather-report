@@ -1,0 +1,60 @@
+<div class="container">
+  <div class="weather-title"> Weather in your city</div>
+<form #weatherForm="ngForm" (ngSubmit)="getWeatherData(weatherForm)">
+  <input
+    name="city"
+    ngModel
+    type="text"
+    placeholder="Enter a city Name"
+    required
+  />
+  <button type="submit" class="SearchFlex">Search</button>
+  <span *ngIf="isLoading"><img src="./../assets/loader.gif" width="50" height="50"/></span>
+  <div class="error"
+    *ngIf="
+      weatherForm.controls['city']?.invalid &&
+      (weatherForm.controls['city']?.dirty ||
+        weatherForm.controls['city']?.touched)
+    "
+  >
+    <span>City is required</span>
+  </div>
+</form>
+</div>
+
+
+<span *ngIf="ResponseError">Error : {{ ResponseError }}</span>
+<div *ngIf="isLoading"><img src="./../assets/loader.gif" width="50" height="50"/></div>
+
+<div class="container">
+    <div class="table-style" *ngFor="let data of weatherData">
+      <table class="tables">
+        <thead>
+          <tr>
+              <td colspan="2">Date: {{ data.dt_txt | date: 'dd/MM/yyyy' }}</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="tempData">
+              <td colspan="2">Temperature</td>
+          </tr>
+          <tr class="tempData">
+              <td>Min</td>
+               <td>Max</td>
+          </tr>
+          <tr class="tempData">
+              <td>{{data.main.temp_min}}</td>
+               <td>{{data.main.temp_max}}</td>
+          </tr>
+           <tr>
+              <td>Pressure</td>
+               <td>{{data.main.pressure}}</td>
+          </tr>
+           <tr>
+              <td>humidity</td>
+               <td>{{data.main.humidity}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+</div>
